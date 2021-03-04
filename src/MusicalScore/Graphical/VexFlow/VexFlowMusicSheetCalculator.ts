@@ -334,7 +334,7 @@ export class VexFlowMusicSheetCalculator extends MusicSheetCalculator {
         }
       }
 
-      const bBox: BoundingBox = container instanceof GraphicalLyricEntry ? container.GraphicalLabel.PositionAndShape : container.PositionAndShape;
+      const bBox: BoundingBox = container.GraphicalLabel.PositionAndShape;
       const labelWidth: number = bBox.Size.width;
       const staffEntryXPosition: number = (staffEntry as VexFlowStaffEntry).PositionAndShape.RelativePosition.x;
       const xPosition: number = staffEntryXPosition + bBox.BorderMarginLeft;
