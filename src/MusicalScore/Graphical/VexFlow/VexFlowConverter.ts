@@ -283,8 +283,8 @@ export class VexFlowConverter {
                     // If it's a whole rest we want it smack in the middle. Apparently there is still an issue in vexflow:
                     // https://github.com/0xfe/vexflow/issues/579 The author reports that he needs to add some negative x shift
                     // if the measure has no modifiers.
-                    alignCenter = true;
-                    xShift = rules.WholeRestXShiftVexflow * unitInPixels; // TODO find way to make dependent on the modifiers
+                    alignCenter = false;
+                    xShift = /*rules.WholeRestXShiftVexflow*/ 0 * unitInPixels; // TODO find way to make dependent on the modifiers
                     // affects VexFlowStaffEntry.calculateXPosition()
                 }
                 if (note.sourceNote.ParentStaff.Voices.length > 1) {
